@@ -22,7 +22,7 @@ int main()
 	XAllocColor(dpy, cmap, &yellow);
 	unsigned long yellowColor = yellow.pixel;
 
-	Window startframe = newXWindow("Relo", 0, 0, 125, 225, yellowColor, KeyPressMask | EnterWindowMask | LeaveWindowMask );
+	Window startframe = newXWindow("Relo", 0, 0, 125, 225, yellowColor, EnterWindowMask | LeaveWindowMask );
 	GC gc = XCreateGC(dpy, startframe, 0, &gcv);
 	XMapWindow(dpy, startframe);
 
