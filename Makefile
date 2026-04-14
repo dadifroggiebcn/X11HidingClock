@@ -1,3 +1,2 @@
 all:
-	tcc -o main main.c -lX11
-	./main
+	gcc -o relo main.c -static -lX11 -lpthread -lxcb -lXau -lXdmcp
