@@ -13,8 +13,9 @@ int showTime(Window win, GC gc)
 	return 1;
 }
 
-int main()
+int main(int argc)
 {
+	if (argc > 1) { puts("\nSimple X11 clock application.\nUsage:\n ./relo\n This executable accepts no arguments.\n"); return 0; }
 	if (!setUpX()) return 0;
 	// Set yellow colour
 	XColor yellow;Colormap cmap = DefaultColormap(dpy, screen);
